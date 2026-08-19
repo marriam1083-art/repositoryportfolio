@@ -1,0 +1,904 @@
+@import "tailwindcss";
+
+/* =========================================================
+   MARRIAM ISHFAQ
+   FUTURISTIC NEON SPACE PORTFOLIO
+   Tailwind CSS v4
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #040611;
+    color: #f8fafc;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+    background: rgba(56, 189, 248, 0.35);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #040611;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #38bdf8,
+            #818cf8,
+            #f472b6
+        );
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   MAIN SPACE BACKGROUND
+   ========================================================= */
+
+.space-bg {
+    position: relative;
+
+    min-height: 100vh;
+
+    /* IMPORTANT:
+       Do NOT use overflow:hidden here.
+       It can stop the whole page from scrolling.
+    */
+
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(56, 189, 248, 0.10),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(139, 92, 246, 0.13),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 100% 70%,
+            rgba(236, 72, 153, 0.10),
+            transparent 32%
+        ),
+
+        #040611;
+}
+
+
+/* =========================================================
+   AURORA GLOW
+   ========================================================= */
+
+.space-bg::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: 50%;
+    top: -250px;
+
+    transform: translateX(-50%);
+
+    background:
+        conic-gradient(
+            from 180deg,
+            transparent,
+            rgba(56, 189, 248, 0.14),
+            rgba(139, 92, 246, 0.16),
+            rgba(236, 72, 153, 0.12),
+            transparent
+        );
+
+    filter: blur(80px);
+
+    opacity: 0.7;
+
+    animation:
+        auroraMove 12s ease-in-out infinite alternate;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+@keyframes auroraMove {
+
+    0% {
+        transform:
+            translateX(-50%)
+            rotate(0deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateX(-45%)
+            rotate(25deg)
+            scale(1.15);
+    }
+
+    100% {
+        transform:
+            translateX(-55%)
+            rotate(-20deg)
+            scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   FLOATING NEON ORB
+   ========================================================= */
+
+.space-bg::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    bottom: 5%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.16),
+            rgba(139, 92, 246, 0.08) 40%,
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    animation:
+        orbFloat 9s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-80px, -50px);
+    }
+}
+
+
+/* =========================================================
+   REMOVE OLD GRID
+   ========================================================= */
+
+.grid-bg {
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   CONTENT SHOULD STAY ABOVE BACKGROUND EFFECTS
+   ========================================================= */
+
+.space-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   PURPLE GLOW
+   ========================================================= */
+
+.glow-purple {
+    box-shadow:
+        0 0 25px rgba(167, 139, 250, 0.22),
+        0 0 70px rgba(167, 139, 250, 0.08);
+}
+
+
+/* =========================================================
+   CYAN GLOW
+   ========================================================= */
+
+.glow-cyan {
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.22),
+        0 0 70px rgba(56, 189, 248, 0.08);
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            #38bdf8,
+            #818cf8,
+            #c084fc,
+            #f472b6,
+            #38bdf8
+        );
+
+    background-size: 300% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        textFlow 7s linear infinite;
+}
+
+
+@keyframes textFlow {
+
+    to {
+        background-position: 300% center;
+    }
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.nav-glass {
+    background:
+        rgba(4, 6, 17, 0.80);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom:
+        1px solid rgba(56, 189, 248, 0.15);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    z-index: 50;
+}
+
+
+/* =========================================================
+   GLASS CARDS
+   ========================================================= */
+
+.glass-card {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.glass-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(56, 189, 248, 0.35);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(56, 189, 248, 0.10);
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    top: -110px;
+    right: -110px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #8b5cf6,
+            #ec4899
+        );
+
+    opacity: 0.10;
+
+    border-radius: 50%;
+
+    filter: blur(40px);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+.project-card:hover::before {
+    transform: scale(2.2);
+    opacity: 0.20;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0ea5e9,
+            #6366f1,
+            #c026d3
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 8px 30px rgba(99, 102, 241, 0.25);
+
+    transition: all 0.35s ease;
+}
+
+
+.btn-primary::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 0.6s;
+}
+
+
+.btn-primary:hover::before {
+    left: 140%;
+}
+
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 45px rgba(56, 189, 248, 0.22),
+        0 10px 35px rgba(236, 72, 153, 0.15);
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+   ========================================================= */
+
+.btn-outline {
+    transition: all 0.35s ease;
+}
+
+
+.btn-outline:hover {
+    background:
+        rgba(56, 189, 248, 0.08);
+
+    border-color:
+        #38bdf8;
+
+    color:
+        #38bdf8;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.12);
+}
+
+
+/* =========================================================
+   FLOATING ANIMATION
+   ========================================================= */
+
+.float {
+    animation:
+        premiumFloat 6s ease-in-out infinite;
+}
+
+
+@keyframes premiumFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-14px)
+            rotate(1deg);
+    }
+}
+
+
+/* =========================================================
+   PULSE GLOW
+   ========================================================= */
+
+.pulse-glow {
+    animation:
+        neonPulse 3s ease-in-out infinite;
+}
+
+
+@keyframes neonPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 rgba(56, 189, 248, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(56, 189, 248, 0.18),
+            0 0 60px rgba(139, 92, 246, 0.08);
+    }
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.star {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    opacity: 0.5;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 10px rgba(56, 189, 248, 0.8);
+
+    animation:
+        starTwinkle 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.6);
+
+        box-shadow:
+            0 0 7px #ffffff,
+            0 0 15px #38bdf8,
+            0 0 22px #818cf8;
+    }
+}
+
+
+/* =========================================================
+   SECTION REVEAL
+   ========================================================= */
+
+.reveal {
+    animation:
+        reveal 0.8s ease both;
+}
+
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline-line {
+    position: absolute;
+
+    left: 11px;
+
+    top: 25px;
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #38bdf8,
+            #818cf8,
+            #c084fc,
+            #f472b6,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+
+/* =========================================================
+   SECTION KICKER
+   ========================================================= */
+
+.section-kicker {
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+
+/* =========================================================
+   CODE FONT
+   ========================================================= */
+
+.code-font {
+    font-family:
+        "JetBrains Mono",
+        Consolas,
+        monospace;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skill {
+    display: inline-block;
+
+    padding:
+        0.45rem
+        0.75rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: #cbd5e1;
+
+    font-size: 0.8rem;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.skill:hover {
+    color: #ffffff;
+
+    border-color:
+        rgba(56, 189, 248, 0.55);
+
+    background:
+        rgba(56, 189, 248, 0.08);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.12);
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero-title {
+    letter-spacing: -0.04em;
+
+    text-shadow:
+        0 0 40px rgba(56, 189, 248, 0.08);
+}
+
+
+/* =========================================================
+   NEON BORDER
+   ========================================================= */
+
+.neon-border {
+    border:
+        1px solid rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.06),
+        inset 0 0 20px rgba(139, 92, 246, 0.03);
+}
+
+
+/* =========================================================
+   AVATAR GLOW
+   ========================================================= */
+
+.avatar-glow {
+    position: relative;
+}
+
+
+.avatar-glow::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -15px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #38bdf8,
+            #818cf8,
+            #c084fc,
+            #f472b6,
+            #38bdf8
+        );
+
+    filter: blur(18px);
+
+    opacity: 0.35;
+
+    animation:
+        avatarRotate 8s linear infinite;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+@keyframes avatarRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ANIMATED GIRL / CENTER AVATAR
+   ========================================================= */
+
+.animated-avatar {
+    position: relative;
+
+    animation:
+        avatarFloat 5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(56, 189, 248, 0.20)
+        );
+}
+
+
+@keyframes avatarFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-15px);
+    }
+}
+
+
+/* =========================================================
+   SOFT NEON IMAGE GLOW
+   ========================================================= */
+
+.image-glow {
+    filter:
+        drop-shadow(
+            0 0 18px rgba(56, 189, 248, 0.20)
+        )
+        drop-shadow(
+            0 0 35px rgba(139, 92, 246, 0.12)
+        );
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.05;
+    }
+
+    .space-bg::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    .space-bg::after {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .skill {
+        font-size: 0.72rem;
+
+        padding:
+            0.4rem
+            0.6rem;
+    }
+}

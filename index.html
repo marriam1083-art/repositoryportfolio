@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Marriam Ishfaq — BSAI Student, Generative AI Learner, Front-End Developer and AI Automation Explorer."
+    >
+
+    <title>Marriam Ishfaq | AI & Automation Portfolio</title>
+
+    <!-- Tailwind Generated CSS -->
+<link rel="stylesheet" href="./dist/output.css">
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+<style>
+
+/* =========================================================
+   LEFT PROFILE IMAGE — FLOATING
+========================================================= */
+
+.avatar-float {
+    animation: avatarFloat 4s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes avatarFloat {
+
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate3d(5px, -8px, 0) rotate(1deg);
+    }
+
+    50% {
+        transform: translate3d(0, -14px, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate3d(-5px, -7px, 0) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   GIF AVATAR — LARGE FLOATING GIRL
+========================================================= */
+
+.animated-avatar {
+
+    position: relative;
+
+    z-index: 30;
+
+    width: 430px;
+
+    max-width: none;
+
+    height: auto;
+
+    object-fit: contain;
+
+    animation: girlFloat 5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 18px rgba(56, 189, 248, 0.28))
+        drop-shadow(0 0 40px rgba(139, 92, 246, 0.22));
+
+}
+
+
+/* Floating movement */
+
+@keyframes girlFloat {
+
+    0% {
+        transform: translate3d(0, 10px, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate3d(8px, -5px, 0) rotate(1deg);
+    }
+
+    50% {
+        transform: translate3d(0, -25px, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate3d(-8px, -8px, 0) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate3d(0, 10px, 0) rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   SPEAKING EFFECT
+========================================================= */
+
+.avatar-speaking {
+
+    animation:
+        girlFloat 2s ease-in-out infinite,
+        avatarSpeak 0.7s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes avatarSpeak {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+
+}
+
+
+/* =========================================================
+   AVATAR GLOW
+========================================================= */
+
+.avatar-glow {
+
+    animation: avatarGlowPulse 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes avatarGlowPulse {
+
+    0% {
+        opacity: 0.35;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0.35;
+        transform: scale(0.95);
+    }
+
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    width: 390px;
+
+    height: 390px;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   AI AVATAR AREA
+========================================================= */
+
+.ai-avatar-area {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1023px) {
+
+    .animated-avatar {
+
+        width: 350px;
+
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .animated-avatar {
+
+        width: 300px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="space-bg">
+
+
+<!-- =====================================================
+     BACKGROUND STARS
+===================================================== -->
+
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+
+    <span
+        class="star"
+        style="top:12%;left:8%;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:22%;left:18%;animation-delay:.5s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:8%;left:32%;animation-delay:1s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:35%;left:72%;animation-delay:1.5s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:18%;left:88%;animation-delay:2s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:55%;left:12%;animation-delay:.8s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:70%;left:82%;animation-delay:1.2s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:82%;left:25%;animation-delay:2.2s;"
+    ></span>
+
+    <span
+        class="star"
+        style="top:90%;left:68%;animation-delay:.3s;"
+    ></span>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="fixed top-0 left-0 right-0 z-50 nav-glass">
+
+    <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+    >
+
+        <a
+            href="#home"
+            class="text-xl font-extrabold tracking-wider"
+        >
+
+            <span class="gradient-text">
+                MARRIAM
+            </span>
+
+            <span class="text-white">
+                .
+            </span>
+
+        </a>
+
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+
+            <a
+                href="#home"
+                class="text-gray-300 hover:text-white transition"
+            >
+                Home
+            </a>
+
+            <a
+                href="#about"
+                class="text-gray-300 hover:text-white transition"
+            >
+                About
+            </a>
+
+            <a
+                href="#skills"
+                class="text-gray-300 hover:text-white transition"
+            >
+                Skills
+            </a>
+
+            <a
+                href="#projects"
+                class="text-gray-300 hover:text-white transition"
+            >
+                Projects
+            </a>
+
+            <a
+                href="#experience"
+                class="text-gray-300 hover:text-white transition"
+            >
+                Experience
+            </a>
+
+            <a
+                href="#contact"
+                class="px-5 py-2 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-semibold transition"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section
+    id="home"
+    class="min-h-screen flex items-center relative overflow-visible pt-24"
+>
+
+    <div class="max-w-7xl mx-auto px-6 w-full">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+            <!-- =================================================
+                 HERO CONTENT
+            ================================================= -->
+
+            <div class="reveal">
+
+                <div
+                    class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card mb-7"
+                >
+
+                    <span
+                        class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-glow"
+                    ></span>
+
+                    <span class="text-sm text-gray-300">
+                        Exploring AI • Automation • Web
+                    </span>
+
+                </div>
+
+
+                <p class="section-kicker mb-4">
+                    BSAI Student & Generative AI Learner
+                </p>
+
+
+                <h1
+                    class="hero-title text-5xl md:text-7xl font-extrabold leading-tight tracking-tight"
+                >
+
+                    Hi, I'm
+
+                    <span class="gradient-text">
+                        Marriam
+                    </span>
+
+                    <br>
+
+                    <span class="text-white">
+                        Ishfaq.
+                    </span>
+
+                </h1>
+
+
+                <p
+                    class="mt-7 text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl"
+                >
+
+                    I build creative web experiences, explore
+                    Generative AI, and create automation workflows
+                    that turn ideas into practical solutions.
+
+                </p>
+
+
+                <!-- =================================================
+                     YOUR PERSONAL IMAGE
+                ================================================= -->
+
+                <div class="mt-6">
+
+                    <img
+    src="./WhatsApp Image 2026-08-19 at 10.22.04 PM.jpeg"
+    alt="Marriam Ishfaq"
+    style="
+        width:105px;
+        height:105px;
+        border-radius:50%;
+        object-fit:cover;
+        border:2px solid #a78bfa;
+        display:block;
+    "
+>
+                </div>
+
+
+                <!-- =================================================
+                     BUTTONS
+                ================================================= -->
+
+                <div class="mt-9 flex flex-wrap gap-4">
+
+                    <a
+                        href="#projects"
+                        class="btn-primary px-7 py-3.5 rounded-xl bg-violet-600 hover:bg-violet-500 font-semibold"
+                    >
+                        Explore My Projects →
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn-outline px-7 py-3.5 rounded-xl border border-violet-400/40 text-gray-200 font-semibold"
+                    >
+                        Let's Connect
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     TECH TAGS
+                ================================================= -->
+
+                <div class="mt-9 flex flex-wrap gap-3">
+
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
+                        Python
+                    </span>
+
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
+                        HTML
+                    </span>
+
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
+                        Tailwind
+                    </span>
+
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
+                        n8n
+                    </span>
+
+                    <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
+                        Generative AI
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HERO VISUAL
+            ================================================= -->
+
+            <div class="hidden lg:flex justify-center">
+
+                <div class="hero-visual float">
+
+
+                    <!-- Outer Circle -->
+
+                    <div
+                        class="absolute inset-0 rounded-full border border-violet-500/20"
+                    ></div>
+
+
+                    <!-- Inner Circle -->
+
+                    <div
+                        class="absolute inset-8 rounded-full border border-cyan-400/20"
+                    ></div>
+
+
+                    <!-- Glow -->
+
+                    <div
+                        class="absolute inset-16 rounded-full bg-violet-600/10 blur-2xl"
+                    ></div>
+
+
+                    <!-- =================================================
+                         FLOATING AI GIRL
+                    ================================================= -->
+
+                    <div class="ai-avatar-area">
+
+
+                        <!-- Avatar Glow -->
+
+                        <div
+                            id="avatarGlow"
+                            class="absolute w-72 h-72 rounded-full
+                                   bg-gradient-to-r
+                                   from-violet-600/40
+                                   to-cyan-400/40
+                                   blur-3xl avatar-glow"
+                        ></div>
+
+
+                        <!-- =================================================
+                             GIF
+                        ================================================= -->
+<img
+    src="./animated girl gif.gif"
+    alt="Animated AI Girl"
+    class="animated-avatar w-64 h-64 object-contain"
+>
+
+                        <!-- Speaking Indicator -->
+
+                        <span
+                            id="speakingDot"
+                            class="absolute bottom-20 right-16
+                                   w-4 h-4 rounded-full
+                                   bg-emerald-400
+                                   border-2 border-[#111024]"
+                        ></span>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FLOATING TECHNOLOGY TAGS
+                    ================================================= -->
+
+                    <div
+                        class="absolute top-5 right-3 z-40
+                               px-4 py-2 rounded-xl
+                               glass-card
+                               text-sm text-cyan-300"
+                    >
+                        Python
+                    </div>
+
+
+                    <div
+                        class="absolute bottom-8 left-0 z-40
+                               px-4 py-2 rounded-xl
+                               glass-card
+                               text-sm text-violet-300"
+                    >
+                        n8n Automation
+                    </div>
+
+
+                    <!-- AI GUIDE PANEL -->
+
+                    <div
+                        class="absolute -bottom-20 left-1/2
+                               -translate-x-1/2 z-40
+                               w-[300px]
+                               glass-card
+                               rounded-3xl
+                               p-5
+                               text-center"
+                    >
+
+                        <p class="text-lg font-bold text-white">
+                            Hi, I'm Marriam 👋
+                        </p>
+
+
+                        <p
+                            id="avatarStatus"
+                            class="text-xs text-gray-400 mt-1"
+                        >
+                            AI Portfolio Guide
+                        </p>
+
+
+                        <!-- Voice Buttons -->
+
+                        <div class="mt-4 flex justify-center gap-2">
+
+                            <button
+                                id="readPortfolioBtn"
+                                type="button"
+                                class="px-4 py-2 rounded-lg
+                                       bg-violet-600
+                                       hover:bg-violet-500
+                                       text-xs font-semibold
+                                       transition"
+                            >
+                                🔊 Read
+                            </button>
+
+
+                            <button
+                                id="stopSpeakingBtn"
+                                type="button"
+                                class="px-4 py-2 rounded-lg
+                                       border border-white/10
+                                       bg-white/5
+                                       hover:bg-white/10
+                                       text-xs font-semibold
+                                       transition"
+                            >
+                                ■ Stop
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    id="about"
+    class="py-28 relative"
+>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="mb-14">
+
+            <p class="section-kicker">
+                About Me
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mt-3"
+            >
+                Turning learning into
+                <span class="gradient-text">
+                    real projects.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="grid lg:grid-cols-3 gap-6">
+
+
+            <div
+                class="lg:col-span-2 glass-card rounded-3xl p-8"
+            >
+
+                <h3 class="text-2xl font-bold mb-5">
+                    Who I Am
+                </h3>
+
+                <p class="text-gray-400 leading-8">
+
+                    I'm Marriam Ishfaq, a BSc Artificial Intelligence
+                    student with a strong interest in web development,
+                    Generative AI, automation and intelligent systems.
+
+                    My learning journey combines programming,
+                    front-end development, AI concepts and practical
+                    automation projects.
+
+                </p>
+
+                <p class="text-gray-400 leading-8 mt-5">
+
+                    Alongside my academic studies, I am continuously
+                    building projects to understand how technology can
+                    solve real-world problems. I enjoy learning by
+                    creating, experimenting and turning ideas into
+                    working solutions.
+
+                </p>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-8">
+
+                <p class="section-kicker mb-4">
+                    Current Focus
+                </p>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <p class="font-semibold">
+                            Generative AI
+                        </p>
+
+                        <p class="text-sm text-gray-500 mt-1">
+                            Prompt Engineering & AI Applications
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="font-semibold">
+                            Automation
+                        </p>
+
+                        <p class="text-sm text-gray-500 mt-1">
+                            n8n, APIs & Workflow Automation
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="font-semibold">
+                            Agentic AI
+                        </p>
+
+                        <p class="text-sm text-gray-500 mt-1">
+                            Exploring intelligent AI workflows
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="font-semibold">
+                            Front-End Development
+                        </p>
+
+                        <p class="text-sm text-gray-500 mt-1">
+                            HTML, CSS & Tailwind CSS
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section
+    id="skills"
+    class="py-28 grid-bg"
+>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-14">
+
+            <p class="section-kicker">
+                Skills & Technologies
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mt-3"
+            >
+                My <span class="gradient-text">toolkit.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl mb-5">
+                    💻
+                </div>
+
+                <h3 class="text-xl font-bold mb-5">
+                    Programming
+                </h3>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="skill">Python</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">SQL</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl mb-5">
+                    🌐
+                </div>
+
+                <h3 class="text-xl font-bold mb-5">
+                    Web Development
+                </h3>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">Tailwind CSS</span>
+                    <span class="skill">Responsive Design</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl mb-5">
+                    🤖
+                </div>
+
+                <h3 class="text-xl font-bold mb-5">
+                    AI & ML
+                </h3>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="skill">AI</span>
+                    <span class="skill">ML</span>
+                    <span class="skill">DL</span>
+                    <span class="skill">Generative AI</span>
+                    <span class="skill">Prompt Engineering</span>
+                    <span class="skill">LangChain</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl mb-5">
+                    ⚡
+                </div>
+
+                <h3 class="text-xl font-bold mb-5">
+                    Automation
+                </h3>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="skill">n8n</span>
+                    <span class="skill">REST APIs</span>
+                    <span class="skill">Email Automation</span>
+                    <span class="skill">API Automation</span>
+                    <span class="skill">Agentic AI</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="mt-6 glass-card rounded-3xl p-7"
+        >
+
+            <h3 class="text-xl font-bold mb-5">
+                Computer Science Foundations
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+
+                <span class="px-4 py-2 rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                    Data Structures & Algorithms
+                </span>
+
+                <span class="px-4 py-2 rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                    DBMS
+                </span>
+
+                <span class="px-4 py-2 rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                    MySQL
+                </span>
+
+                <span class="px-4 py-2 rounded-xl bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                    REST APIs
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section
+    id="projects"
+    class="py-28"
+>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="mb-14">
+
+            <p class="section-kicker">
+                Featured Work
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mt-3"
+            >
+                Projects I've
+                <span class="gradient-text">
+                    built.
+                </span>
+            </h2>
+
+            <p class="text-gray-400 max-w-2xl mt-5">
+
+                A collection of creative web experiences,
+                automation workflows and AI-focused projects.
+
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🌃
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-violet-400 font-bold">
+                    HTML • CSS
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Cyber City
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    An animated futuristic digital city created
+                    with HTML and CSS, featuring stars, clouds,
+                    motion effects and a cyber-inspired environment.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    Creative Front-End Project →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🌌
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-cyan-400 font-bold">
+                    Web Experience
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Neural Space
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    A futuristic interactive web concept inspired
+                    by artificial intelligence, neural systems and
+                    digital space.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    Futuristic UI Project →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🖥️
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-violet-400 font-bold">
+                    HTML • CSS
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Dream OS
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    A futuristic operating-system-inspired
+                    interface created to explore front-end UI,
+                    layouts, interaction and visual design.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    UI Concept Project →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🔄
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-cyan-400 font-bold">
+                    n8n • REST API • MySQL
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    REST API Automation
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    An ETL automation workflow that retrieves
+                    paginated REST API records, transforms the
+                    data and stores product records in MySQL.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    Automation Project →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    📧
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-violet-400 font-bold">
+                    AI • n8n
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    AI Email Response
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    An email automation concept that processes
+                    incoming emails and creates suitable responses
+                    using an automated workflow.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    AI Automation →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🍽️
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-cyan-400 font-bold">
+                    Automation • Customer Service
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Restaurant Order Automation
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    An automation concept for handling restaurant
+                    orders, checking order status and responding
+                    to customer requests efficiently.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    Customer Automation →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    💬
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-violet-400 font-bold">
+                    AI • n8n
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Customer Query Automation
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    A workflow concept designed to process
+                    customer queries and provide relevant
+                    automated responses.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    AI Workflow →
+                </div>
+
+            </article>
+
+
+            <article class="project-card glass-card rounded-3xl p-7">
+
+                <div class="text-4xl mb-5">
+                    🧠
+                </div>
+
+                <p class="text-xs uppercase tracking-widest text-cyan-400 font-bold">
+                    Learning
+                </p>
+
+                <h3 class="text-2xl font-bold mt-3">
+                    Agentic AI Exploration
+                </h3>
+
+                <p class="text-gray-400 mt-4 leading-7">
+
+                    Exploring AI agents, intelligent workflows,
+                    automation and emerging technologies to build
+                    smarter systems.
+
+                </p>
+
+                <div class="mt-6 text-sm text-cyan-400">
+                    Currently Exploring →
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section
+    id="experience"
+    class="py-28 grid-bg"
+>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="mb-14">
+
+            <p class="section-kicker">
+                Experience
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold mt-3">
+
+                My professional
+
+                <span class="gradient-text">
+                    journey.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="relative pl-8">
+
+            <div class="timeline-line"></div>
+
+
+            <div class="relative mb-12">
+
+                <div
+                    class="absolute -left-[27px] top-1 w-5 h-5 rounded-full bg-violet-500 border-4 border-[#070714]"
+                ></div>
+
+                <div class="glass-card rounded-3xl p-7">
+
+                    <p class="text-sm text-violet-400 font-semibold">
+                        Professional Experience
+                    </p>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Front Desk Officer
+                    </h3>
+
+                    <p class="text-gray-400 mt-4 leading-7">
+
+                        Working in a customer-facing role while
+                        developing communication, organization,
+                        coordination and professional service skills.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="relative">
+
+                <div
+                    class="absolute -left-[27px] top-1 w-5 h-5 rounded-full bg-cyan-400 border-4 border-[#070714]"
+                ></div>
+
+                <div class="glass-card rounded-3xl p-7">
+
+                    <p class="text-sm text-cyan-400 font-semibold">
+                        Previous Experience
+                    </p>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Teaching Experience
+                    </h3>
+
+                    <p class="text-gray-400 mt-4 leading-7">
+
+                        Developed communication, presentation,
+                        explanation and people-management skills
+                        through teaching experience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section
+    id="education"
+    class="py-28"
+>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 gap-6">
+
+
+            <div class="glass-card rounded-3xl p-8">
+
+                <p class="section-kicker">
+                    Education
+                </p>
+
+                <h2 class="text-3xl font-bold mt-3 mb-7">
+                    Academic Background
+                </h2>
+
+
+                <div class="border-l border-violet-500/30 pl-6">
+
+                    <p class="text-violet-400 font-semibold">
+                        Current
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        BSc Artificial Intelligence
+                    </h3>
+
+                    <p class="text-gray-400 mt-3">
+
+                        Currently studying Artificial Intelligence
+                        with a focus on programming, AI concepts,
+                        data structures, databases and software
+                        development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-8">
+
+                <p class="section-kicker">
+                    Certifications
+                </p>
+
+                <h2 class="text-3xl font-bold mt-3 mb-7">
+                    Additional Learning
+                </h2>
+
+
+                <div class="space-y-6">
+
+                    <div>
+
+                        <p class="font-bold">
+                            Generative AI Course
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            SMIT Faisalabad
+                        </p>
+
+                        <p class="text-gray-500 text-sm mt-2">
+
+                            HTML, CSS, Generative AI, automation,
+                            AI/ML concepts and modern AI tools.
+
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-bold">
+                            MS Office Certificate
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            3-Month Course
+                        </p>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            MS Word, Excel, PowerPoint and Urdu typing.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-bold">
+                            Front Desk Officer Certificate
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            6-Month Course
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARNING JOURNEY
+===================================================== -->
+
+<section
+    id="learning"
+    class="py-28 grid-bg"
+>
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <p class="section-kicker">
+            Learning Journey
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-3">
+
+            Always
+            <span class="gradient-text">
+                learning.
+            </span>
+
+        </h2>
+
+        <p class="text-gray-400 max-w-3xl mx-auto mt-6 leading-8">
+
+            My current learning journey is focused on combining
+            Artificial Intelligence with practical software
+            development and automation.
+
+        </p>
+
+
+        <div class="mt-12 grid md:grid-cols-3 gap-5">
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl">
+                    🧠
+                </div>
+
+                <h3 class="font-bold text-xl mt-4">
+                    Generative AI
+                </h3>
+
+                <p class="text-gray-500 mt-3 text-sm">
+
+                    Prompt engineering, AI applications and
+                    intelligent workflows.
+
+                </p>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl">
+                    ⚙️
+                </div>
+
+                <h3 class="font-bold text-xl mt-4">
+                    Automation
+                </h3>
+
+                <p class="text-gray-500 mt-3 text-sm">
+
+                    n8n, APIs, email workflows and practical
+                    business automation.
+
+                </p>
+
+            </div>
+
+
+            <div class="glass-card rounded-3xl p-7">
+
+                <div class="text-3xl">
+                    🤖
+                </div>
+
+                <h3 class="font-bold text-xl mt-4">
+                    Agentic AI
+                </h3>
+
+                <p class="text-gray-500 mt-3 text-sm">
+
+                    Exploring AI agents and autonomous intelligent
+                    workflows.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    id="contact"
+    class="py-28"
+>
+
+    <div class="max-w-5xl mx-auto px-6">
+
+        <div
+            class="glass-card glow-purple rounded-[2rem] p-8 md:p-14 text-center"
+        >
+
+            <p class="section-kicker">
+                Let's Connect
+            </p>
+
+            <h2
+                class="text-4xl md:text-6xl font-extrabold mt-4"
+            >
+
+                Let's build something
+
+                <span class="gradient-text">
+                    intelligent.
+                </span>
+
+            </h2>
+
+
+            <p
+                class="text-gray-400 max-w-2xl mx-auto mt-6 leading-8"
+            >
+
+                I'm always interested in learning, collaborating
+                and building meaningful projects around AI,
+                automation and web development.
+
+            </p>
+
+
+            <div
+                class="mt-10 flex flex-wrap justify-center gap-4"
+            >
+
+                <a
+                    href="https://github.com/marriam1083-art"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 font-semibold"
+                >
+                    GitHub ↗
+                </a>
+
+
+                <a
+                    href="YOUR-LINKEDIN-URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline px-6 py-3 rounded-xl border border-violet-400/40 font-semibold"
+                >
+                    LinkedIn ↗
+                </a>
+
+
+                <a
+                    href="mailto:YOUR-EMAIL"
+                    class="btn-outline px-6 py-3 rounded-xl border border-cyan-400/30 text-cyan-300 font-semibold"
+                >
+                    Email Me ✉
+                </a>
+
+            </div>
+
+
+            <div
+                class="mt-10 pt-8 border-t border-white/10"
+            >
+
+                <p class="text-gray-500 text-sm">
+
+                    Available for learning, collaboration and
+                    creative opportunities.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer
+    class="border-t border-white/10 py-8"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+
+        <p class="text-gray-500 text-sm">
+
+            © 2026 Marriam Ishfaq.
+            Built with HTML, CSS & Tailwind CSS.
+
+        </p>
+
+
+        <div class="flex gap-5 text-sm">
+
+            <a
+                href="#home"
+                class="text-gray-500 hover:text-white transition"
+            >
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     VOICE READER
+===================================================== -->
+
+<script>
+
+const readButton =
+    document.getElementById("readPortfolioBtn");
+
+const stopButton =
+    document.getElementById("stopSpeakingBtn");
+
+const avatarStatus =
+    document.getElementById("avatarStatus");
+
+const speakingDot =
+    document.getElementById("speakingDot");
+
+const avatarGlow =
+    document.getElementById("avatarGlow");
+
+
+/* =====================================================
+   PORTFOLIO CONTENT
+===================================================== */
+
+const portfolioSections = [
+
+    {
+        name: "Home",
+
+        text:
+        "Hi, I'm Marriam Ishfaq. " +
+        "I'm a BSc Artificial Intelligence student " +
+        "and Generative AI learner. " +
+        "I build creative web experiences, explore Generative AI, " +
+        "and create automation workflows that turn ideas into " +
+        "practical solutions."
+    },
+
+
+    {
+        name: "About Me",
+
+        text:
+        "Welcome to my About Me section. " +
+        "I'm Marriam Ishfaq, a BSc Artificial Intelligence student " +
+        "with a strong interest in web development, Generative AI, " +
+        "automation and intelligent systems. " +
+        "My learning journey combines programming, front-end development, " +
+        "AI concepts and practical automation projects. " +
+        "I enjoy learning by creating, experimenting and turning ideas " +
+        "into working solutions."
+    },
+
+
+    {
+        name: "Skills",
+
+        text:
+        "Now let's explore my skills and technologies. " +
+        "My programming skills include Python, C plus plus, Java, " +
+        "JavaScript and SQL. " +
+        "For web development, I work with HTML5, CSS3, Tailwind CSS " +
+        "and responsive design. " +
+        "I also explore Artificial Intelligence, Machine Learning, " +
+        "Deep Learning, Generative AI, Prompt Engineering and LangChain. " +
+        "For automation, I work with n8n, REST APIs, email automation " +
+        "and API automation."
+    },
+
+
+    {
+        name: "Projects",
+
+        text:
+        "Now let me introduce my projects. " +
+        "Cyber City is an animated futuristic digital city created " +
+        "with HTML and CSS. " +
+
+        "Neural Space is a futuristic interactive web concept " +
+        "inspired by artificial intelligence and digital space. " +
+
+        "Dream OS is a futuristic operating system inspired interface " +
+        "created to explore front-end design and interaction. " +
+
+        "I also built a REST API Automation project using n8n, REST APIs " +
+        "and MySQL to retrieve, transform and store product data. " +
+
+        "Other projects include AI Email Response, Restaurant Order Automation, " +
+        "Customer Query Automation and Agentic AI exploration."
+    },
+
+
+    {
+        name: "Experience",
+
+        text:
+        "Now let's talk about my professional experience. " +
+        "I have experience as a Front Desk Officer, " +
+        "where I developed communication, organization, coordination " +
+        "and professional service skills. " +
+
+        "I also have teaching experience, which helped me develop " +
+        "communication, presentation, explanation and people management skills."
+    },
+
+
+    {
+        name: "Education",
+
+        text:
+        "Now let's explore my education and certifications. " +
+        "I am currently studying BSc Artificial Intelligence. " +
+        "My academic learning includes programming, Artificial Intelligence, " +
+        "data structures, databases and software development. " +
+
+        "I have also completed a Generative AI course from SMIT Faisalabad, " +
+        "a three month MS Office course, and a Front Desk Officer course."
+    },
+
+
+    {
+        name: "Learning Journey",
+
+        text:
+        "My learning journey is focused on combining Artificial Intelligence " +
+        "with practical software development and automation. " +
+
+        "I am currently learning Generative AI, prompt engineering, " +
+        "n8n automation, APIs and Agentic AI. " +
+
+        "My goal is to keep learning, building practical projects " +
+        "and creating intelligent solutions."
+    },
+
+
+    {
+        name: "Contact",
+
+        text:
+        "Finally, let's connect. " +
+        "I'm interested in learning, collaboration and creative opportunities " +
+        "around Artificial Intelligence, automation and web development. " +
+
+        "Thank you for visiting my portfolio. " +
+        "Feel free to connect with me through GitHub, LinkedIn or email. " +
+
+        "It was great having you here. Thank you."
+    }
+
+];
+
+
+let currentSection = 0;
+
+let isReading = false;
+
+let selectedFemaleVoice = null;
+
+
+/* =====================================================
+   FIND FEMALE VOICE
+===================================================== */
+
+function loadFemaleVoice() {
+
+    const voices =
+        window.speechSynthesis.getVoices();
+
+    if (!voices.length) {
+        return;
+    }
+
+
+    const femaleKeywords = [
+
+        "Zira",
+        "Jenny",
+        "Aria",
+        "Samantha",
+        "Victoria",
+        "Karen",
+        "Susan",
+        "Hazel",
+        "Catherine",
+        "Google US English Female",
+        "Microsoft Jenny",
+        "Microsoft Aria"
+
+    ];
+
+
+    selectedFemaleVoice =
+        voices.find(voice =>
+
+            femaleKeywords.some(keyword =>
+
+                voice.name
+                    .toLowerCase()
+                    .includes(
+                        keyword.toLowerCase()
+                    )
+
+            )
+
+        );
+
+
+    if (!selectedFemaleVoice) {
+
+        selectedFemaleVoice =
+            voices.find(voice =>
+                voice.lang === "en-US"
+            );
+
+    }
+
+
+    if (!selectedFemaleVoice) {
+
+        selectedFemaleVoice =
+            voices.find(voice =>
+                voice.lang.startsWith("en")
+            );
+
+    }
+
+}
+
+
+window.speechSynthesis.onvoiceschanged =
+    loadFemaleVoice;
+
+loadFemaleVoice();
+
+
+/* =====================================================
+   AVATAR SPEAKING
+===================================================== */
+
+function avatarSpeaking(sectionName) {
+
+    avatarStatus.innerText =
+        "Reading " + sectionName + "... 🔊";
+
+
+    speakingDot.classList.remove(
+        "bg-emerald-400"
+    );
+
+
+    speakingDot.classList.add(
+        "bg-cyan-400",
+        "pulse-glow"
+    );
+
+
+    avatarGlow.classList.add(
+        "animate-pulse"
+    );
+
+}
+
+
+/* =====================================================
+   AVATAR STOPPED
+===================================================== */
+
+function avatarStopped() {
+
+    avatarStatus.innerText =
+        "AI Portfolio Guide";
+
+
+    speakingDot.classList.remove(
+        "bg-cyan-400",
+        "pulse-glow"
+    );
+
+
+    speakingDot.classList.add(
+        "bg-emerald-400"
+    );
+
+
+    avatarGlow.classList.remove(
+        "animate-pulse"
+    );
+
+}
+
+
+/* =====================================================
+   READ NEXT SECTION
+===================================================== */
+
+function readNextSection() {
+
+    if (!isReading) {
+
+        avatarStopped();
+
+        return;
+
+    }
+
+
+    if (
+        currentSection >=
+        portfolioSections.length
+    ) {
+
+        isReading = false;
+
+        avatarStatus.innerText =
+            "Portfolio completed ✓";
+
+        avatarStopped();
+
+        return;
+
+    }
+
+
+    const section =
+        portfolioSections[currentSection];
+
+
+    avatarSpeaking(
+        section.name
+    );
+
+
+    const speech =
+        new SpeechSynthesisUtterance(
+            section.text
+        );
+
+
+    speech.rate = 0.9;
+
+    speech.pitch = 1.05;
+
+    speech.volume = 1;
+
+
+    if (selectedFemaleVoice) {
+
+        speech.voice =
+            selectedFemaleVoice;
+
+    }
+
+
+    speech.onend = function () {
+
+        if (!isReading) {
+
+            avatarStopped();
+
+            return;
+
+        }
+
+
+        currentSection++;
+
+
+        setTimeout(
+            function () {
+
+                readNextSection();
+
+            },
+            500
+        );
+
+    };
+
+
+    speech.onerror = function (event) {
+
+        console.log(
+            "Speech error:",
+            event.error
+        );
+
+
+        if (isReading) {
+
+            currentSection++;
+
+
+            setTimeout(
+                function () {
+
+                    readNextSection();
+
+                },
+                300
+            );
+
+        }
+
+    };
+
+
+    window.speechSynthesis.resume();
+
+
+    window.speechSynthesis.speak(
+        speech
+    );
+
+}
+
+
+/* =====================================================
+   READ BUTTON
+===================================================== */
+
+readButton.addEventListener(
+    "click",
+    function () {
+
+        window.speechSynthesis.cancel();
+
+        currentSection = 0;
+
+        isReading = true;
+
+        loadFemaleVoice();
+
+        readNextSection();
+
+    }
+);
+
+
+/* =====================================================
+   STOP BUTTON
+===================================================== */
+
+stopButton.addEventListener(
+    "click",
+    function () {
+
+        isReading = false;
+
+        window.speechSynthesis.cancel();
+
+        avatarStopped();
+
+    }
+);
+
+
+/* =====================================================
+   KEEP SPEECH ALIVE
+===================================================== */
+
+setInterval(
+    function () {
+
+        if (
+            isReading &&
+            window.speechSynthesis.speaking
+        ) {
+
+            window.speechSynthesis.resume();
+
+        }
+
+    },
+    5000
+);
+
+</script>
+
+</body>
+
+</html>
